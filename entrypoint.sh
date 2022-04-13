@@ -28,6 +28,8 @@ echo -e "\tTAG_CONTEXT: ${tag_context}"
 echo -e "\tPRERELEASE_SUFFIX: ${suffix}"
 echo -e "\tVERBOSE: ${verbose}"
 
+git config --global --add safe.directory /github/workspace
+
 current_branch=$(git rev-parse --abbrev-ref HEAD)
 
 pre_release="true"
